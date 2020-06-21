@@ -1,16 +1,10 @@
 <?php
 
-interface Product() {
-
-  private $id;
-
-  private $name;
-
-  private $price;
+interface ProductInterface {
 
   public function setId(int $id);
 
-  public function setName(string $name)
+  public function setName(string $name);
 
   public function setPrice(int $price);
 
@@ -19,6 +13,5 @@ interface Product() {
   public function getName() : string;
 
   public function getPrice() : int;
-
-  public function saveToDB() : string;
+  
 }

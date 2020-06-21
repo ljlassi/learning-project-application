@@ -1,5 +1,7 @@
 <?php
 
+require_once('ProductInterface.php');
+
 class Product implements ProductInterface {
 
   private $id;
@@ -30,15 +32,6 @@ class Product implements ProductInterface {
 
   public function getPrice() : int {
     return $this->price;
-  }
-
-  public function saveToDB(PDO $db) : string {
-    if(!isset($this->id, $this->name, $this->price)) {
-      throw new Exception("Object data does not have all data, cannot continue execution.")
-    }
-    else {
-      
-    }
   }
 
 }
