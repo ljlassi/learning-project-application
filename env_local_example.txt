@@ -1,0 +1,6 @@
+Put your mysql credentials here, remove this comment and rename the file to env_local.php
+
+
+define('DB_CONNECT_STRING', "mysql:host=localhost;dbname=database_name");
+define('DB_USER', "mysql_username");
+define('DB_PASSWORD', "database_password");

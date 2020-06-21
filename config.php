@@ -12,3 +12,5 @@ error_reporting(E_ALL);
 
 define ("SITE_URL", "http://localhost");
 define ("PROJECT_DIR", "/var/www/html/projects/learning_application");
+
+require_once(PROJECT_DIR . "/env_local.php");

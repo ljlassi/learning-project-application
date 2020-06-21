@@ -1,10 +1,14 @@
 <?php
 
 /**
-* Get config file
+* Get config file, connect to MySQL database and get PDO object
 *
 */
 require_once("config.php");
+require_once(PROJECT_DIR . '/db/ConnectDB.php');
+$connect_db = new ConnectDB();
+$connect_db->connectToDB();
+$db = $connect_db->getDBObject(); 
 
 /**
 * Start building the application front page, get page header
