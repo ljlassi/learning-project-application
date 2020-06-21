@@ -4,6 +4,8 @@ interface Product() {
 
   private $id;
 
+  private $name;
+
   private $price;
 
   public function setId(int $id);
@@ -17,4 +19,6 @@ interface Product() {
   public function getName() : string;
 
   public function getPrice() : int;
+
+  public function saveToDB() : string;
 }
