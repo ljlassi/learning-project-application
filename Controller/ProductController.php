@@ -16,4 +16,20 @@ class ProductController {
   return 1;
   }
 
+  public function listAllProducts(PDO $db) : Array {
+    $statement = $db->prepare('SELECT * FROM products LIMIT 50');
+    $statement->execute();
+    $products_array = array();
+    $i = 0;
+    try {
+      while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+        $products_array[$i] = $row;
+        $i++;
+      }
+    } catch(PDOException $e) {
+      echo $e->getMessage();
+    }
+    return $products_array;
+  }
+
 }

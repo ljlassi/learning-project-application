@@ -10,3 +10,7 @@
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+<h2>List of all products (max 50)</h2>
+<?php
+  require_once(PROJECT_DIR . '/action/list_products.php');
+  
