@@ -27,6 +27,10 @@
     echo "<td>Product Price:</td>";
     echo "<td>" . $product_price . "€</td>";
     echo "</tr>";
+    echo "<tr>";
+    echo "<td>Product Added:</td>";
+    echo "<td>" . $product['created_at'] . "</td>";
+    echo "</tr>";
   }
 
   echo "</table>";

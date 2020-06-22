@@ -9,7 +9,7 @@ $connect_db = new ConnectDB();
 $connect_db->connectToDB();
 $db = $connect_db->getDBObject();
 
-$statement = 'CREATE TABLE products (id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255), price INT, created_at DateTime, PRIMARY KEY(id))';
+$statement = 'CREATE TABLE products (id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255), price INT, created_at TIMESTAMP, PRIMARY KEY(id))';
 try {
   if($db->query($statement)) {
     echo "Success.";
