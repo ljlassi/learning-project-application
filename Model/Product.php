@@ -10,15 +10,9 @@ class Product implements ProductInterface {
 
   private $price;
 
-  public function setId(int $id) : void {
+  public function __construct(int $id, string $name, int $price) {
     $this->id = $id;
-  }
-
-  public function setName(string $name) : void {
     $this->name = $name;
-  }
-
-  public function setPrice(int $price) : void {
     $this->price = $price;
   }
 
