@@ -32,9 +32,6 @@ class ProductController {
     return $products_array;
   }
 
-  public function addUser(User $user, PostRequest $request_object) : int {
-    $request_object->sendPostRequest();
-    return 0;
-  }
+
 
 }

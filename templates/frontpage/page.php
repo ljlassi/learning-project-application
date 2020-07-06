@@ -10,7 +10,9 @@
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+<p>
+<a href="<?php echo SITE_URL; ?>/action/add_user.php">Add user</a>
+</p>
 <h2>List of all products (max 50)</h2>
 <?php
   require_once(PROJECT_DIR . '/action/list_products.php');
-  
