@@ -8,6 +8,10 @@ require_once("config.php");
 require_once(PROJECT_DIR . '/db/ConnectDB.php');
 $connect_db = new ConnectDB();
 $connect_db->connectToDB();
+// Check if the database has been prepared, if not, prepare it
+if (!$connect_db->checkDBPrepareScriptRan()) {
+    die("Database not prepared, please run the prepare script first.");
+}
 $db = $connect_db->getDBObject(); 
 
 /**
